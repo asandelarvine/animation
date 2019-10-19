@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>My First Animation</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <style type="text/css">
+            img{
+                position: relative; /* Required to move element */
+            }
+        </style>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("img").animate({
+                    left: 500
+                });
+            });
+            $("#button2").click(function(){
+                $("img").animate({
+                    left: 0
+                });
+            });
+        });
+        </script>
+    </head>       
+    <body>
+        <button id="button1">Move Right</button>
+        <button id="button2">Move Left</button>
+        <p>
+            <img src="animation.jpg" alt="animating">
+        </p>
+    </body>
+</html>
